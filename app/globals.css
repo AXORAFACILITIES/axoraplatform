@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Axora brand palette */
+  --axora-navy: #0a3a60;
+  --axora-blue: #1579d6;
+  --axora-sky: #33a0da;
+  --axora-slate: #d1d6de;
+
+  --background: #f7f9fc;
+  --foreground: var(--axora-navy);
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--background)] text-axora-navy antialiased;
+  }
+}
+
+@keyframes axoraStepIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.step-fade {
+  animation: axoraStepIn 250ms ease-out;
+}
